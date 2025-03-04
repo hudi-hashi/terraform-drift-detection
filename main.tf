@@ -61,4 +61,9 @@ resource "aws_instance" "bastion" {
 
   subnet_id              = module.vpc.public_subnets[0]
   vpc_security_group_ids = [aws_security_group.bastion.id]
+tags = {
+    Name = var.instance_name
+    Department = "test"
+    Billable = "No"
+  }
 }
