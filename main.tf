@@ -64,6 +64,6 @@ resource "aws_instance" "bastion" {
   tags = {
     Name = var.instance_name
     Department = "test"
-    #Billable = "No"
+    Billable = "yes"
   }
 }
